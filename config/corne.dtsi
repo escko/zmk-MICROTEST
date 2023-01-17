@@ -75,11 +75,6 @@ bottom_encoder: encoder_bottom {
         	    sensors = <&top_encoder &bottom_encoder>;
    	};
 
-/ {
-    chosen {
-        zmk,underglow = &led_strip;
-    };
-};
 
 	// TODO: per-key RGB node(s)?
 };
