@@ -31,7 +31,7 @@
                 default_layer {
                         bindings = <
    &trans &trans &trans &trans &trans &trans                                                       &trans &trans &trans &trans &trans &trans
-   &trans &trans &rgb_ug RGB_TOG &kp W &mt LGUI Q &kp R                                                   &trans &trans &trans &trans &trans &trans
+   &trans &trans &mt LGUI Q &kp E &kp W &kp R                                                   &trans &trans &trans &trans &trans &trans
    &trans &trans &lt LOWER A &mt S T &kp D &kp F                                                         &trans &trans &trans &trans &trans &trans
                  &mt LALT Z &mt SPACE X &mt LSHFT C                                             &trans &trans &trans
                         >; 
