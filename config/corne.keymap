@@ -26,14 +26,35 @@
     tapping-term-ms = <130>;
 };
 
-/ {
-    chosen {
-        zmk,underglow = &led_strip;
-    };
+&spi1 {
+	compatible = "nordic,nrf-spim";
+	/* Cannot be used together with i2c0. */
+	status = "okay";
+	mosi-pin = <6>;
+	// Unused pins, needed for SPI definition, but not used by the ws2812 driver itself.
+	sck-pin = <5>;
+	miso-pin = <7>;
+
+	led_strip: ws2812@0 {
+		compatible = "worldsemi,ws2812-spi";
+		label = "SK6812mini";
+
+		/* SPI */
+		reg = <0>; /* ignored, but necessary for SPI bindings */
+		spi-max-frequency = <4000000>;
+
+		/* WS2812 */
+		chain-length = <27>; /* There are per-key RGB, but the first 16 are underglow */
+		spi-one-frame = <0x70>;
+		spi-zero-frame = <0x40>;
+	};
 };
 
-// Overwrite number of leds on the keyboard. A Corne has 27 per side.
-&led_strip { chain-length = <7>; };
+/ {
+	chosen {
+		zmk,underglow = &led_strip;
+	};
+};
 
 / {
         keymap {
@@ -42,7 +63,7 @@
                 default_layer {
                         bindings = <
    &trans &trans &trans &trans &trans &trans                                                       &trans &trans &trans &trans &trans &trans
-   &trans &trans &mt LGUI Q &kp E &kp W &kp R                                                   &trans &trans &trans &trans &trans &trans
+   &trans &trans &rgb_ug RGB_TOG &kp E &kp W &kp R                                                   &trans &trans &trans &trans &trans &trans
    &trans &trans &lt LOWER A &mt S T &kp D &kp F                                                         &trans &trans &trans &trans &trans &trans
                  &mt LALT Z &mt SPACE X &mt LSHFT C                                             &trans &trans &trans
                         >; 
