@@ -26,6 +26,11 @@
     tapping-term-ms = <130>;
 };
 
+/ {
+    chosen {
+        zmk,underglow = &led_strip;
+    };
+};
 
 // Overwrite number of leds on the keyboard. A Corne has 27 per side.
 &led_strip { chain-length = <7>; };
