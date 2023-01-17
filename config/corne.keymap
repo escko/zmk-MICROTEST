@@ -24,11 +24,6 @@
     tapping-term-ms = <130>;
 };
 
-/ {
-	chosen {
-		zmk,underglow = &led_strip;
-	};
-};
 
 / {
         keymap {
