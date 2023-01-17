@@ -65,7 +65,7 @@
    &trans &trans &trans &trans &trans &trans                                                       &trans &trans &trans &trans &trans &trans
    &trans &trans &rgb_ug RGB_TOG &kp E &kp W &kp R                                                   &trans &trans &trans &trans &trans &trans
    &trans &trans &lt LOWER A &mt S T &kp D &kp F                                                         &trans &trans &trans &trans &trans &trans
-                 &mt LALT Z &mt SPACE X &mt LSHFT C                                             &trans &trans &trans
+                 &mt LALT Z &mt SPACE X &mt LSHFT C                                              &trans &trans &trans
                         >; 
                         sensor-bindings = <&inc_dec_kp N1 N4 &inc_dec_kp N2 N3>;
                 };
