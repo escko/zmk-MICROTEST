@@ -21,3 +21,9 @@
 		spi-zero-frame = <0x40>;
 	};
 };
+
+/ {
+	chosen {
+		zmk,underglow = &led_strip;
+	};
+};
