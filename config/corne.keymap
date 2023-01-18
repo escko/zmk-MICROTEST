@@ -1,4 +1,3 @@
-#include <../boards/shields/corne/boards/nice_nano.overlay>
 #include <dt-bindings/led/led.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
