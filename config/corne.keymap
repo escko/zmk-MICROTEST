@@ -14,7 +14,7 @@
 
 
 
-//&left_encoder { resolution = <2>; };
+//&left_encoder   { resolution = <2>; };
 // &left1_encoder { resolution = <2>; };
 // &right_encoder { resolution = <1>; };
 
