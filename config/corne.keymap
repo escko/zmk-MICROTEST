@@ -18,7 +18,6 @@
 // &left1_encoder  { resolution = <2>; };
 // &right_encoder  { resolution = <1>; };
 
-/ {
 
 &mt {
     tapping-term-ms = <130>;
