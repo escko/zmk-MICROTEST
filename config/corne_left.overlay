@@ -12,11 +12,3 @@
 		, <&pro_micro 14 GPIO_ACTIVE_HIGH>
 		;
 };
-
-&top_encoder {
-    status = "okay";
-};
-
-&bottom_encoder {
-    status = "okay";
-};
