@@ -22,22 +22,30 @@
     tapping-term-ms = <135>;
 };
 
-led_strip: ws2812@0 {
-  compatible = "worldsemi,ws2812-spi";
-  label = "WS2812";
 
-  /* SPI */
-  reg = <0>; /* ignored, but necessary for SPI bindings */
-  spi-max-frequency = <4000000>;
+top_encoder: encoder_top {
+                compatible = "alps,ec11";
+                label = "TOP_ENCODER";
+                a-gpios = <&pro_micro_d 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+                b-gpios = <&pro_micro_d 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+                resolution = <2>;
+                status = "okay";
+        };
 
-  /* WS2812 */
-  chain-length = <4>; /* number of LEDs */
-  spi-one-frame = <0x70>;
-  spi-zero-frame = <0x40>;
-  color-mapping = <LED_COLOR_ID_RED
-                   LED_COLOR_ID_GREEN
-                   LED_COLOR_ID_BLUE>;
-};
+bottom_encoder: encoder_bottom {
+                compatible = "alps,ec11";
+                label = "BOTTOM_ENCODER";
+                a-gpios = <&pro_micro_d 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+                b-gpios = <&pro_micro_d 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+                resolution = <2>;
+                status = "okay";
+        };
+
+        sensors {
+                    compatible = "zmk,keymap-sensors";
+                    sensors = <&top_encoder &bottom_encoder>;
+        };
+
 
 / {
         keymap {
