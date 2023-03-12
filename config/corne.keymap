@@ -53,16 +53,16 @@
 
 / {   
         behaviors {
-        mkp_kp: mouse_click {
+        mtt: mod_tap_tap {
                 compatible = "zmk,behavior-hold-tap";
-                label = "MOUSE_CLICK";
+                label = "MOD_TAP_TAP";
                 #binding-cells = <2>;
-                tapping-term-ms = <250>;
+                tapping-term-ms = <230>;
                 quick-tap-ms = <100>;
                 flavor = "tap-preferred";
-                bindings = <&mkp>, <&kp>;
+                bindings = <&kp>, <&kp>;
               };
-        mtt: mod_tap_tap {
+        mtt2: mod_tap_tap {
                 compatible = "zmk,behavior-hold-tap";
                 label = "MOD_TAP_TAP";
                 #binding-cells = <2>;
