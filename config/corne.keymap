@@ -43,7 +43,7 @@
 
                 default_layer {
                         bindings = <
-   &trans &trans &trans &trans &trans &rgb_ug RGB_TOG                                                       &trans &trans &trans &trans &trans &trans
+   &trans &trans &none &trans &trans &rgb_ug RGB_TOG                                                       &trans &trans &trans &trans &trans &trans
    &trans &trans &mt LGUI Q &kp W &kp E &kp R                                                   &trans &trans &trans &trans &trans &trans
    &trans &trans &lt LOWER A &mt S T &kp D &kp F                                                         &trans &trans &trans &trans &trans &trans
                  &rgb_ug RGB_TOG &mt SPACE X &mt LSHFT C                                              &trans &trans &trans
