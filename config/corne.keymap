@@ -76,7 +76,7 @@
                 
                 combo_media {
                         timeout-ms = <100>;
-                        key-positions = <14 26>;
+                        key-positions = <26 27>;
                         bindings = <&mo 3>;
                 };
         };
@@ -141,43 +141,43 @@ keymap {
 
                 default_layer {
                         bindings = <
-   &trans &trans &trans &trans &trans &trans                                                     &trans &trans &trans &trans &trans &trans
-   &trans &trans &mt SPACE N1 &kp W &mt E N4 &mtt LG(R) R                                        &trans &trans &trans &trans &trans &trans
-   &trans &trans &mt LCTRL A &mt S LA(LG(S)) &kp D &kp F                                                       &trans &trans &trans &trans &trans &trans
-                 &mt LSHFT Z &mt LALT X &mt LGUI C                                               &trans &trans &trans
+   &trans &trans &trans &trans &trans &trans                                                     &trans &trans &trans &trans &trans &trans             
+   &trans &trans &mt SPACE Q &kp W &kp E &mt LA(LGUI) Z                                        &trans &trans &mt SPACE N1 &kp W &mt E N4 &mtt LG(R) R
+   &trans &trans &mt LSHFT A &kp F &mt S LA(LG(S)) &kp D                                               &trans &trans &kp A &kp F &mt S LA(LG(S)) &kp D       
+                 &mt LALT X &none &mt LGUI C                                                             &mt LSHFT Z &mt LALT X &mt LGUI C       
                         >; 
                         
-   sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp LEFT RIGHT>;
+   sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp N2 N3>;
                 };
       
                 mobile_layer {
                         bindings = <
    &trans &trans &trans &trans &trans &trans                                              &trans &trans &trans &trans &trans &trans            
-   &trans &trans &mt SPACE N1 &mt LA(LGUI) W &mt E N4 &mtt N0 R                                  &trans &trans &mt SPACE N1 &kp W &mt LA(LGUI) E &kp R
-   &trans &trans &mt LCTRL A &mt S LA(LG(S)) &mt D LA(LG(D)) &kp F                                                &trans &trans &kp A &mt S T &kp D &kp F              
-                 &mt LSHFT Z &mt LALT X &mt LGUI C                                                      &mt LALT Z &mt LSHFT X &mt LGUI C      
+   &trans &trans &mt SPACE Q &kp Z &kp B &kp E                                   &trans &trans &mt SPACE N1 &kp W &mt LA(LGUI) E &kp R
+   &trans &trans &mt LSHFT L &kp F &kp V &kp S                                                &trans &trans &kp A &mt S T &kp D &kp F              
+                 &mt LALT X &none &mt LGUI C                                                     &mt LALT Z &mt LSHFT X &mt LGUI C      
                         >;
                         
-   sensor-bindings = <&inc_dec_kp LBKT RBKT &inc_dec_kp N2 N3>;
+   sensor-bindings = <&inc_dec_kp LBKT RBKT &inc_dec_kp LBKT RBKT>;
                 };
       
                 lower_layer {
                         bindings = <
    &trans &trans &trans &trans &trans &trans                                                     &trans &trans &trans &trans &trans &trans
-   &trans &trans &none &none &kp BACKSPACE &kp G                                                &trans &trans &trans &trans &trans &trans
-   &trans &trans &kp J &kp K &kp L &kp H                                                   &trans &trans &trans &trans &trans &trans
-                 &kp LG(X) &kp LG(V) &kp LG(C)                                                     &trans &trans &trans
+   &trans &trans &none &none &kp LG(C) &kp LG(V)                                                &trans &trans &trans &trans &trans &trans
+   &trans &trans &trans &kp K &kp O &kp LG(X)                                                   &trans &trans &trans &trans &trans &trans
+                 &kp P &none &mtt LG(R) R                                                     &trans &trans &trans
                         >;
    
-   sensor-bindings = <&inc_dec_kp LG(G) LS(G) &inc_dec_kp MINUS EQUAL>;
+   sensor-bindings = <&inc_dec_kp LG(G) LS(G) &inc_dec_kp LG(Z) LS(LG(Z)>;
                 };
 
                 media_layer {
                         bindings = <
    &trans &trans &trans &trans &trans &trans                                                     &trans &trans &trans &trans &trans &trans
-   &trans &trans &none &kp C_RW &kp C_FF &lt BLUE F6                                          &trans &trans &trans &trans &trans &trans
-   &trans &trans &none &kp C_SLOW2 &kp C_SLOW &tog 1                                                        &trans &trans &trans &trans &trans &trans
-                 &kp LC(UP_ARROW) &kp RG(RA(N0)) &kp C_PLAY_PAUSE                                        &trans &trans &trans
+   &trans &trans &tog 1 &none &none &kp LC(UP_ARROW)                                          &trans &trans &trans &trans &trans &trans
+   &trans &trans &none &none &none &kp RG(RA(N0))                                                        &trans &trans &trans &trans &trans &trans
+                 &lt BLUE F6 &none &kp C_PLAY_PAUSE                                        &trans &trans &trans
                         >;
    
    sensor-bindings = <&inc_dec_kp LG(MINUS) LG(EQUAL) &inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -186,9 +186,9 @@ keymap {
                 blue_layer {
                         bindings = <
    &trans &trans &trans &trans &trans &trans                                                     &trans &trans &trans &trans &trans &trans
-   &trans &trans &bt BT_SEL 0 &rgb_ug RGB_SAD &rgb_ug RGB_SAI &none                            &trans &trans &trans &trans &trans &trans
-   &trans &trans &bt BT_SEL 1 &rgb_ug RGB_BRD &rgb_ug RGB_BRI &rgb_ug RGB_TOG                             &trans &trans &trans &trans &trans &trans
-                 &bt BT_CLR  &rgb_ug RGB_EFF &rgb_ug RGB_HUI                                     &trans &trans &trans
+   &trans &trans &bt BT_SEL 0 &rgb_ug RGB_SAD &rgb_ug RGB_SAI &rgb_ug RGB_HUI                            &trans &trans &trans &trans &trans &trans
+   &trans &trans &bt BT_CLR &rgb_ug RGB_BRD &rgb_ug RGB_BRI &rgb_ug RGB_EFF                             &trans &trans &trans &trans &trans &trans
+                 &none &none &rgb_ug RGB_TOG                                     &trans &trans &trans
                         >;
                         
    sensor-bindings = <&inc_dec_kp &none &none &inc_dec_kp &none &none>;  
